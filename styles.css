@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topBg {
+  position: fixed;
+  right: 0;
+  z-index: -1;
+}
+
+.bottomBg {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+body {
+  background-color: #f7f7ff;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: scroll;
+  height: 110vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+  max-width: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.title {
+  color: hsl(232, 13%, 33%);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 7rem;
+  word-spacing: 0.2rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+#toggleBg {
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 20px;
+  display: flex;
+}
+.monthly {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.annually {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#toggleButton {
+  /* width: 20px;
+  height: 20px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 50%;
+  position: absolute;
+  left: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 0.5s ease-in-out; */
+  height: 20px;
+  width: 20px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 50%;
+}
+
+.sub-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.card-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  padding: 3.1rem 2.1rem;
+  color: #fffeff;
+  border-radius: 10px;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.card-left,
+.card-right {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  width: 100%;
+  padding: 2.1rem 2.1rem;
+  color: #737282;
+  font-weight: 200;
+}
+
+.card-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 2rem 0;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.features span {
+  font-weight: 700;
+  align-self: center;
+  opacity: 0.78;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.learn-more button {
+  width: 90%;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 1.1rem;
+  word-spacing: 3px;
+  letter-spacing: 1.2px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-left .learn-more button {
+  border: 1px solid;
+  color: #f7fcff;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.card-left .learn-more button:hover {
+  background: #ffffff;
+  color: #6d6fd8;
+  border: 1px solid #6d6fd8;
+}
+
+.card-right .learn-more button {
+  border: 1px solid;
+  color: #f7fcff;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.card-right .learn-more button:hover {
+  background: #ffffff;
+  color: #6d6fd8;
+  outline: none;
+  border: 1px solid #6d6fd8;
+}
+
+.card-middle .learn-more button {
+  border: 1px solid transparent;
+}
+
+.card-middle .learn-more button:hover {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.card-middle hr {
+  color: #a8adfd;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.4;
+}
+
+hr {
+  opacity: 0.4;
+}
+
+@media (max-width: 1024px) {
+  .bottomBg {
+    display: none;
+  }
+
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 50%;
+    width: 50%;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+
+  .card-left,
+  .card-middle,
+  .card-right {
+    border-radius: 1rem;
+  }
+}
